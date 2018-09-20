@@ -1,10 +1,12 @@
 <?php
+define('IMAGE_TYPE_SINGLE','single');
+define('IMAGE_TYPE_MULTI','multi');
 
-defined("FID_JP_TANPAPERLUASAN") OR define("FID_JP_TANPAPERLUASAN", 1);
-defined("FID_JP_BANJIR") OR define("FID_JP_BANJIR", 2);
-defined("FID_JP_KERUSUHAN") OR define("FID_JP_KERUSUHAN", 3);
-defined("FID_JP_RISIKOLAIN") OR define("FID_JP_RISIKOLAIN", 4);
-defined("FID_JP_BANJIRKERUSUHAN") OR define("FID_JP_BANJIRKERUSUHAN", 5);
-defined("FID_JP_BANJIRRISIKOLAIN") OR define("FID_JP_BANJIRRISIKOLAIN", 6);
-defined("FID_JP_KERUSUHANRISIKOLAIN") OR define("FID_JP_KERUSUHANRISIKOLAIN", 7);
-defined("FID_JP_SEMUAPERLUASAN") OR define("FID_JP_SEMUAPERLUASAN", 8);
+define('IMAGE_THUMB_ORI', 'ori');
+define('IMAGE_THUMB_LARGE', 'large');
+define('IMAGE_THUMB_PORTRAIT', 'portrait');
+define('IMAGE_THUMB_MEDIUM', 'medium');
+define('IMAGE_THUMB_SMALL', 'small');
+define('IMAGE_THUMB_SQUARE', 'square');
+define('IMAGE_THUMB_SMALLER', 'smaller');
+define('IMAGE_THUMB_TINY', 'tiny');

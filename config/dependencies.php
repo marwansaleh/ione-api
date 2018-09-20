@@ -56,7 +56,8 @@ $container['DB'] = function($c) {
 
 //Helper
 $container['helper'] = function($c) {
+    $base_url_setting = $c->get('settings')['base_url'][ENVIRONMENT];
     
-    $helper = new App\Helpers\Helper();
+    $helper = new App\Helpers\Helper($base_url_setting['site_url'],$base_url_setting['image_url']);
     return $helper;
 };

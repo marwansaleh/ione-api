@@ -1,7 +1,7 @@
 <?php
 return [
     'settings' => [
-        'determineRouteBeforeAppMiddleware' => true,
+        //'determineRouteBeforeAppMiddleware' => true,
         'displayErrorDetails' => true,//(ENVIRONMENT=='production' ? false:true),
         'addContentLengthHeader' => false,
         //'routerCacheFile' => '../caches/fastroute.cache'
@@ -11,15 +11,15 @@ return [
                 'host'          => 'localhost',
                 'user'          => 'root',
                 'pwd'           => '',
-                'dbname'        => 'stabilitas_new',
+                'dbname'        => 'indonesiasatu_db',
                 'port'          => '3306'
             ],
             'production' => [
                 'driver'        => 'mysql',
                 'host'          => 'localhost',
-                'user'          => 'stabilit_new2',
-                'pwd'           => 'stabilit_new2',
-                'dbname'        => 'stabilit_new2',
+                'user'          => 'k2427808_indon1',
+                'pwd'           => '9Qe79vs3Wd',
+                'dbname'        => 'k2427808_main',
                 'port'          => '3306'
             ]
         ],
@@ -31,6 +31,16 @@ return [
             'mail_level' => \Monolog\Logger::CRITICAL,
             'mail_from' => 'support@stabilitas.co.id',
             'mail_to' => 'support@stabilitas.co.id',
+        ],
+        'base_url' => [
+            'production' => [
+                'site_url' => 'http://indonesiasatu.co',
+                'image_url' => 'http://images.indonesiasatu.co',
+            ],
+            'development' => [
+                'site_url' => 'http://localhost/~marwansaleh/indonesiasatuco',
+                'image_url' => 'http://localhost/~marwansaleh/indonesiasatuco'
+            ]
         ]
     ],
     'notFoundHandler' => function ($container) {

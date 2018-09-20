@@ -15,6 +15,7 @@ class Controller {
     protected $_tb_category = 'nsc_category';
     protected $_tb_user = 'nsc_users';
     protected $_tb_comment = 'nsc_article_comments';
+    protected $_tb_image = 'nsc_article_images';
 
     public function __construct(Container $container) {
         $this->container = $container;

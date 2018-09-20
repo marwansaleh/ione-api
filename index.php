@@ -34,11 +34,11 @@ require APP_PATH.'/vendor/autoload.php';
 $settings = require APP_PATH . '/config/settings.php';
 $app = new \Slim\App($settings);
 
+// Register constants
+require APP_PATH . '/config/constants.php';
+
 // Set up dependencies
 require APP_PATH . '/config/dependencies.php';
-
-// Register constants
-//require APP_PATH . '/config/constants.php';
 
 // Register routes
 require APP_PATH . '/config/routes.php';

@@ -198,7 +198,7 @@ class ArticleController extends Controller {
         $return = [];
         $id = $req->getAttribute('id');
         
-        $sql = "UPDATE {$this->_tb_article} SET viewed=viewed+1 WHERE id=?";
+        $sql = "UPDATE {$this->_tb_article} SET viewed_count=viewed_count+1 WHERE id=?";
         try {
             $stmt = $this->db->prepare($sql);
             $stmt->execute(array($id));

@@ -26,16 +26,14 @@ class ArticleController extends Controller {
         $offset = ($page - 1) * $limit;
         
         try {
-            $sql = "SELECT `P`.`id`, `P`.`edition`, `P`.`title`, `P`.`date`, `P`.`datetime`, `P`.`year`, "
-                    . "`P`.`month`, `P`.`day`, `P`.`global_category`, `P`.`category`, `P`.`slug`, "
-                    . "`P`.`author`, `P`.`main_image`, `P`.`tag`, `P`.`synopsis`, "
-                    . "`P`.`last_update`, `P`.`google_short_url` "
-                    . "FROM {$this->_tb_article} P";
-            $sql.=" WHERE `P`.`is_publishedYN`='y'";
+            $sql = "SELECT id, category_id, title, url_title, url_short, date, day, month, year, synopsis, "
+                    . "image_url, image_caption, image_type, tags, types, allow_comment, comment, view_count, "
+                    . "modified, created FROM {$this->_tb_article}";
+            $sql.=" WHERE published=1";
             if ($q) {
-                $sql.=" AND(`P`.`title` LIKE '%$q%' OR `P`.`synopsis` LIKE '%$q%')";
+                $sql.=" AND(title LIKE '%$q%' OR synopsis LIKE '%$q%')";
             }
-            $sql.= "  ORDER BY `P`.`id` desc LIMIT $offset,$limit";
+            $sql.= "  ORDER BY created desc LIMIT $offset,$limit";
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
             $articles = $stmt->fetchAll(\PDO::FETCH_OBJ);
@@ -48,7 +46,9 @@ class ArticleController extends Controller {
             }
             $return['status'] = true;
             $return['totalResults'] = count($articles);
-            $return['q'] = $q;
+            if ($q){
+                $return['q'] = $q;
+            }
             $return['articles'] = $clean_utf;
             
         } catch (\PDOException $ex) {

@@ -11,10 +11,10 @@ class Controller {
     protected $helper;
 
 
-    protected $_tb_article = 'ns_article_pages';
-    protected $_tb_category = 'ns_article_categories';
-    protected $_tb_user = 'ns_users';
-    protected $_tb_comment = 'ns_article_comments';
+    protected $_tb_article = 'nsc_articles';
+    protected $_tb_category = 'nsc_category';
+    protected $_tb_user = 'nsc_users';
+    protected $_tb_comment = 'nsc_article_comments';
 
     public function __construct(Container $container) {
         $this->container = $container;

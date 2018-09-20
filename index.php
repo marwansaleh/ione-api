@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 
 switch (APP_PATH) {
-    case '/home/stabilit/public_html/api': 
+    case '/u/k2427808/sites/api.indonesiasatu.co/www': 
         define('ENVIRONMENT', 'production'); 
         break;
     

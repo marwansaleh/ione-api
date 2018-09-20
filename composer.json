@@ -1,0 +1,15 @@
+{
+    "name": "marwansaleh/ione-api",
+    "description": "API for IndonesiaSatu news",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marwan Saleh",
+            "email": "marwan.saleh@ymail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.11",
+        "monolog/monolog": "^1.23"
+    }
+}

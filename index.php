@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 
 switch (APP_PATH) {
-    case '/u/k2427808/sites/api.indonesiasatu.co/www': 
+    case '/home/sloki/user/k2427808/sites/images.indonesiasatu.co/www/api': 
         define('ENVIRONMENT', 'production'); 
         break;
     
